@@ -55,9 +55,9 @@ export default {
       memberid: '',
       date: '',
       tell: '',
+      status:'received',
       select:'',
       address: '',
-      loading3:'',
       valid: true,
       items: ['01 : ทำความสะอาดไส้กรองอากาศ',
               '02 : ตรวจสอบสายพาน',
@@ -95,21 +95,29 @@ export default {
    reloadPage() {
       window.location.reload()
     },
+    
    addservice() {
+    
       db.collection("Addservice").doc(this.memberid).set({
         memberid: this.memberid,
         select: this.select,
         date: this.date,
         tell: this.tell,
         address: this.address,
-        })
+        status: this.status,
+
+ })
         .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
+           
+            
         })
         .catch((error) => {
               console.error("Error adding document: ", error);
         });
-
+        
+    
+         alert("บันทุกข้อมูลสำเร็จ !!! สามารถดูข้อมูลได้ที่ > รายการซ่อม")
+        this.reloadPage()
         },
         
  }

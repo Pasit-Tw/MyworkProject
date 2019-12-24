@@ -54,7 +54,7 @@
                         <v-btn
                           color="success"
                           class="mr-4"
-                          @click="updateitem(),dialog = false,reloadPage()"
+                          @click="updateitem(),dialog = false"
                         >Save</v-btn>
                         <v-btn color="blue" class="mr-4" @click="dialog = false">Close</v-btn>
                       </v-card-actions>
@@ -93,7 +93,7 @@
                         <v-btn
                           color="success"
                           class="mr-4"
-                          @click="additem(),dialog1 = false,reloadPage()"
+                          @click="additem(),dialog1 = false"
                         >Save</v-btn>
                         <v-btn color="blue" class="mr-4" @click="dialog1 = false">Close</v-btn>
                       </v-card-actions>
@@ -103,9 +103,7 @@
     </v-form>
     
     <div class="text-center">
-            <v-btn :disabled="disbleGet" text large color="primary" dark v-on="on" @click="getUser()">
-                ดูรายการที่เลือก
-            </v-btn>
+            
            <v-simple-table >
     <template v-slot:default >
       <thead>
@@ -140,6 +138,7 @@ export default {
         dialog1: false,
       UserList: [],
       valid: false,
+    
       pricre: '',
       amount: '',
       itemid: '',
@@ -151,8 +150,8 @@ export default {
               UserList: [],
     }
   },
-  created() {
-    this.getUser()
+    mounted(){
+     this.getUser()
   },
  methods: {
     reloadPage() {
@@ -177,7 +176,7 @@ export default {
         amount: this.amount,
         })
         .then((docRef) => {
-            //  console.log("Document written with ID: ", docRef.id);
+            console.log("Error adding document: ");
         })
         .catch((error) => {
               console.error("Error adding document: ", error);
@@ -192,7 +191,7 @@ export default {
         amount: this.amount,
         })
         .then((docRef) => {
-            //  console.log("Document written with ID: ", docRef.id);
+            alert("บันทึกสำเร็จ")
         })
         .catch((error) => {
               console.error("Error adding document: ", error);

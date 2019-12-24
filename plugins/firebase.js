@@ -3,13 +3,13 @@ import 'firebase/firestore'
 
 if (!firebase.apps.length) {
   const config = {
-    apiKey: "AIzaSyCicENDsV5JSU9WUjXjuCokCeyWN0WR9WU",
-    authDomain: "cs313projecttup.firebaseapp.com",
-    databaseURL: "https://cs313projecttup.firebaseio.com",
-    projectId: "cs313projecttup",
-    storageBucket: "cs313projecttup.appspot.com",
-    messagingSenderId: "244772995551",
-    appId: "1:244772995551:web:986d982ff241881b66846a"
+    apiKey: "AIzaSyDjYDy7UJyPSNKgcR3w7y3ePuJu3KDwrHQ",
+  authDomain: "worktest-e7fde.firebaseapp.com",
+  databaseURL: "https://worktest-e7fde.firebaseio.com",
+  projectId: "worktest-e7fde",
+  storageBucket: "worktest-e7fde.appspot.com",
+  messagingSenderId: "889522988078",
+  appId: "1:889522988078:web:1d5948b1ea0efcf1b7abbf"
 
   }
   firebase.initializeApp(config)

@@ -1,9 +1,5 @@
 <template>
 <div class="text-center">
-  
-            <v-btn :disabled="disbleGet" text large color="primary" dark v-on="on" @click="getUser()">
-                ดูรายการที่เลือก
-            </v-btn>
            <v-simple-table >
     <template v-slot:default >
       <thead>
@@ -54,6 +50,9 @@ export default {
             });
         },
     },
+    mounted(){
+      this.getUser()
+    }
 
 }
 </script>

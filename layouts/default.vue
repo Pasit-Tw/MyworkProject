@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar fixed app color="orange">
+    <v-app-bar fixed app color="purple">
       <div class="my-2">
-        <span class="" >AM3T'auto
+        <span class="" >CarPT
           <v-icon color="black">mdi-tools</v-icon>
         </span>
       </div>
